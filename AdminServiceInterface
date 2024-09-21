@@ -1,0 +1,23 @@
+package com.revshop.service;
+
+import java.util.List;
+
+import com.revshop.entity.Admin;
+import com.revshop.entity.Buyer;
+import com.revshop.entity.Complaints;
+import com.revshop.entity.Product;
+import com.revshop.entity.Retailer;
+
+public interface AdminServiceInterface {
+    Admin adminLoginService(String email, String password);
+    boolean addProduct(Product product);
+    int getProductCount();
+    int getRegistrationCount();
+    int getViewerCount();
+    int getUserCount(); // Add this line
+    List<Buyer> getAllUsers();  // Add this method to fetch users
+	List<Product> getAllProducts();
+	List<Complaints> getAllComplaints();  // Add this method to fetch complaints
+	List<Retailer> getAllRegistrationRequests(); // Add this method
+	List<Retailer> getAllRetailers();
+}
